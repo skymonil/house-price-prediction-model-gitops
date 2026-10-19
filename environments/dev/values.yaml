@@ -9,5 +9,5 @@ applications:
     name: house-price-api
     namespace: applications
 
-    chartPath: environments/dev/charts/applications/house-price-api
+    chartPath: environments/dev/applications/house-price-api
     valuesFile: environments/dev/values/house-price-api.yaml
