@@ -1,0 +1,13 @@
+
+global:
+  repoURL: https://github.com/skymonil/house-price-prediction-model-gitops
+  targetRevision: main
+
+applications:
+  housePriceApi:
+    enabled: true
+    name: house-price-api
+    namespace: applications
+
+    chartPath: environments/dev/charts/applications/house-price-api
+    valuesFile: environments/dev/values/house-price-api.yaml

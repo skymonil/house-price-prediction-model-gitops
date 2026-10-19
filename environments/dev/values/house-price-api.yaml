@@ -1,0 +1,26 @@
+
+replicaCount: 1
+
+image:
+  repository: skymonil/house-price-api
+  tag: "966d1ef20b255fbfe1362b684d301ad925fea527"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+env:
+  MLFLOW_TRACKING_URI: "https://mlflow.615915.xyz"
+  MLFLOW_MODEL_URI: "models:/HousePricePredictor@champion"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+ingress:
+  enabled: false
