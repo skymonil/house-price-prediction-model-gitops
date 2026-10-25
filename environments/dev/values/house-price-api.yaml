@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: skymonil/house-price-api
-  tag: "5a5f4f71339594b9825cc16a62ef38d514cdde55"
+  tag: "3a2b8db7b3e8df3eba3a7738b16f418dab9ea2fa"
   pullPolicy: IfNotPresent
 
 service:
