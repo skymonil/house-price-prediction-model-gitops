@@ -1,4 +1,3 @@
-
 replicaCount: 1
 
 image:
@@ -12,7 +11,24 @@ service:
 
 env:
   MLFLOW_TRACKING_URI: "https://mlflow.615915.xyz"
-  MLFLOW_MODEL_URI: "models:/HousePricePredictor@champion"
+  MLFLOW_MODEL_URI: "models:/HousePricePredictor/1"
+
+probes:
+  liveness:
+    enabled: true
+    path: /health
+    initialDelaySeconds: 10
+    periodSeconds: 10
+    timeoutSeconds: 2
+    failureThreshold: 3
+
+  readiness:
+    enabled: true
+    path: /ready
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    timeoutSeconds: 2
+    failureThreshold: 3
 
 resources:
   requests:
