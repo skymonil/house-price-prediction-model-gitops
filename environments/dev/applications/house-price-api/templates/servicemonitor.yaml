@@ -12,7 +12,8 @@ spec:
       - {{ .Release.Namespace }}
   selector:
     matchLabels:
-      app: house-price-api
+      app.kubernetes.io/instance: house-price-api
+      app.kubernetes.io/name: house-price-api
   endpoints:
     - port: http
       path: /metrics
