@@ -11,3 +11,10 @@ applications:
 
     chartPath: environments/dev/applications/house-price-api
     valuesFile: environments/dev/values/house-price-api.yaml
+    
+  kubePrometheusStack:
+    enabled: true
+    name: kube-prometheus-stack
+    namespace: monitoring
+    chartPath: environments/dev/infrastructure/kube-prometheus-stack
+    valuesFile: environments/dev/values/kube-prometheus-stack.yaml
