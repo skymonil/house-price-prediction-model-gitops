@@ -40,3 +40,6 @@ resources:
 
 ingress:
   enabled: false
+
+serviceMonitor:
+  enabled: true
