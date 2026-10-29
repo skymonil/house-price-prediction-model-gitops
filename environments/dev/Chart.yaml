@@ -1,12 +1,6 @@
-
+# environments/dev/chart.ayml
 apiVersion: v2
 name: dev
 description: Root Helm chart for dev environment GitOps applications
 type: application
 version: 0.1.0
-
-
-dependencies:
-  - name: grafana-dashboards
-    version: 0.1.0
-    repository: "file://infrastructure/grafana-dashboards"
