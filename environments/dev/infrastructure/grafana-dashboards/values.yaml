@@ -1,0 +1,8 @@
+dashboards:
+  apiMonitoring:
+    enabled: true
+    file: api-monitoring.json
+
+  modelMonitoring:
+    enabled: true
+    file: model-monitoring.json

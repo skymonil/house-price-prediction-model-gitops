@@ -1,0 +1,12 @@
+{{- if .Values.dashboards.modelMonitoring.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: house-price-model-monitoring
+  namespace: monitoring
+  labels:
+    grafana_dashboard: "1"
+data:
+  model-monitoring.json: |-
+{{ .Files.Get (printf "dashboards/%s" .Values.dashboards.modelMonitoring.file) | indent 4 }}
+{{- end }}
